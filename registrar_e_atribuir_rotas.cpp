@@ -25,41 +25,49 @@ int main(){
     rota[1].equipe='B';
     rota[2].equipe='C';
   do{
+  	system("cls");
     printf("\n\n\n  ------------------------------\n");
     printf("  |   Criar nova rota (1):     |\n");
     printf("  |                            |\n");
-    printf("  |  Atribuir rota ‡ equipe(2):|\n");
+    printf("  |  Atribuir rota √† equipe(2):|\n");
     printf("  |                            |\n");
     printf("  ------------------------------\n\n ");
+    printf("Escolha uma op√ß√£o: ");
     scanf("%i",&escolha);
+    printf("\n");
     fflush(stdin);
     switch (escolha){
      case 1:
       do{
        existe=false;
-       printf("Qual o identificador da rota ?\n");
+       printf("Qual o identificador da rota? ");
        scanf("%i",&rota[qtd].idrota);
        fflush(stdin); 
+       printf("\n");
        for (int x=0;x<qtd;x++){ 
         if (rota[x].idrota == rota[qtd].idrota){
-         printf("rota j· existe\n");
+         printf("rota j√° existe\n");
+         printf("\n");
          existe=true;}
         }
       }while (existe==true);
-         printf("\nDigite o nome da nova rota\n");
+         printf("Digite o nome da nova rota: ");
          gets(rota[qtd].nome);
          fflush(stdin);
-         printf("Qual È o seu identificador de administrador\n");
+         printf("\n");
+         printf("Qual √© o seu identificador de administrador? ");
          scanf("%i",&rota[qtd].idadm);
          fflush(stdin);
+         printf("\n");
          printf("a rota: %s -> foi criado com sucesso\n",rota[qtd].nome);
+         printf("\n");
          
                    
      break;
      case 2:
       do{
       existe=false;
-      printf("qual È o codigo da rota ?\n");
+      printf("Qual √© o codigo da rota? ");
       scanf("%i",&codigo);
       fflush(stdin);
       for (int x=0;x<qtd;x++){
@@ -67,24 +75,28 @@ int main(){
            existe=true;
            }
            if (existe==false)
-           printf("rota inexistente\n");
+           printf("Rota inexistente\n");
+           printf("\n");
       }while (existe==false);
       do{ 
        existe=false;
-       printf("qual equipe vai receber a rota ?\n");
+       printf("Qual equipe vai receber a rota? ");
        scanf("%c",&equipe);
        fflush(stdin);
+       printf("\n");
        for (int x=0;x<qtd;x++){
            if (equipe==rota[x].equipe)
             existe=true;
            }
            if (existe==true)
-            printf("equipe indisponivel\n");
+            printf("Equipe indisponivel\n");
+            printf("\n");
       }while (existe==true);
-      printf("rota atribuida a equipe  \n");    
+      printf("Rota atribuida a equipe  \n");
+	  printf("\n");    
      break;
     }
- printf("deseja fazer mais alguma coisa ?(s/n)\n");
+ printf("Deseja fazer mais alguma coisa? (s/n) \n");
  scanf("%c",&continua);
  qtd=qtd+1;
 }while (continua=='s');  
