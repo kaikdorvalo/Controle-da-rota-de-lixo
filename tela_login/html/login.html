@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/login.css">
+        <title>Bem Vindo</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container-login"> 
+                <div class="container-imagem">
+                    <div class="container-logo-titulo">
+                        <img src="../img/maringa_branco_2.png">
+                        <h1 class="titulo-scroll">S.C.C.R.O.L</h1>
+                        <h2>Sistema de controle da rota de coleta de lixo</h2>
+                    </div>
+                </div>
+                <div class="container-direita">
+                    <div class="container-informacoes-login">
+                        <div class="foto-perfil">
+                            <img src="../img/perfil.png">
+                        </div>
+
+                        <div class="login-senha">
+
+                                <div id="container-usuario" class="campo-container campo-usuario">
+                                    <div class="icone">
+                                        <img src="../img/do-utilizador.png">
+                                    </div>
+                                    <input id="cpf" class="input" type="text" placeholder="CPF">
+                                </div>
+                                <div id="container-senha" class="campo-container campo-senha">
+                                    <div class="icone">
+                                        <img src="../img/cadeado-trancado.png">
+                                    </div>
+                                    <input id="senha" class="input" type="password" placeholder="Senha">
+                                </div>
+                                <div class="esqueci-manter">
+                                    <div class="container-checkbox">
+                                        <input id="manter" class="checkbox" type="checkbox">
+                                        <label for="manter">Manter conectado</label>
+                                    </div>
+                                    <div>Esqueci a Senha</div>
+                                </div>
+                                <p id="texto-negado">Usuário ou senha inválidos. 3 tentativas restantes.</p>
+                                <button id="entrar" class="btn-entrar">Entrar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../js/login.js"></script>
+    </body>
+</html>
